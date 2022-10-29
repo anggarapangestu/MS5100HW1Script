@@ -41,9 +41,9 @@ boxplot(typingSpeed,ylim=c(20,120),ylab="Typing Speed (wpm)", main = "Typing Spe
 # Advanced Section #
 
 # Statistical Hypothesis Test
-heightTest <- t.test(bodyHeight,alternative = "greater",mu = 158, conf.level = 0.95)
+heightTest <- t.test(bodyHeight,alternative = "greater",mu = 160.3, conf.level = 0.95)
 heightTest
-speedTest <- t.test(typingSpeed,alternative = "two.sided",mu = 40, conf.level = 0.95)
+speedTest <- t.test(typingSpeed,alternative = "two.sided",mu = 40.43, conf.level = 0.95)
 speedTest
 
 # Body height to Typing Speed Correlation
@@ -59,6 +59,7 @@ dataFemale <- subset(data, data$Gender == "Female")
 maleSpeed <- dataMale[,3]
 femaleSpeed <- dataFemale[,3]
 
+femaleSpeed
 ## Comparison by hypothetical testing
 genderComparison <- t.test(maleSpeed, femaleSpeed, conf.level = 0.95,alternative = "greater")
 genderComparison
